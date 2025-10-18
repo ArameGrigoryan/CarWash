@@ -1,0 +1,11 @@
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/bin/Debug/net8.0/CarWash.Core.deps.json
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/bin/Debug/net8.0/CarWash.Core.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/bin/Debug/net8.0/CarWash.Core.pdb
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/CarWash.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/CarWash.Core.AssemblyInfoInputs.cache
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/CarWash.Core.AssemblyInfo.cs
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/CarWash.Core.csproj.CoreCompileInputs.cache
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/CarWash.Core.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/refint/CarWash.Core.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/CarWash.Core.pdb
+/Users/picsartacademy/Desktop/CarWash/CarWash.Core/obj/Debug/net8.0/ref/CarWash.Core.dll

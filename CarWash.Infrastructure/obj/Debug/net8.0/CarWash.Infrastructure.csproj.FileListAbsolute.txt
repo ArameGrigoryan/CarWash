@@ -1,0 +1,17 @@
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/bin/Debug/net8.0/CarWash.Infrastructure.deps.json
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/bin/Debug/net8.0/CarWash.Infrastructure.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/bin/Debug/net8.0/CarWash.Infrastructure.pdb
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/bin/Debug/net8.0/CarWash.Application.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/bin/Debug/net8.0/CarWash.Core.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/bin/Debug/net8.0/CarWash.Core.pdb
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/bin/Debug/net8.0/CarWash.Application.pdb
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash.Infrastructure.csproj.AssemblyReference.cache
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash.Infrastructure.AssemblyInfoInputs.cache
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash.Infrastructure.AssemblyInfo.cs
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash..6667D4A9.Up2Date
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash.Infrastructure.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/refint/CarWash.Infrastructure.dll
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/CarWash.Infrastructure.pdb
+/Users/picsartacademy/Desktop/CarWash/CarWash.Infrastructure/obj/Debug/net8.0/ref/CarWash.Infrastructure.dll

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash.Application", "CarWash.Application\CarWash.Application.csproj", "{A01E2907-664C-4755-9438-47662599335C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash.Core", "CarWash.Core\CarWash.Core.csproj", "{CF8FCD7F-243B-4F5C-AB1C-8F2FDAE7EA5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash.Infrastructure", "CarWash.Infrastructure\CarWash.Infrastructure.csproj", "{44A741AF-D07E-4E06-910B-926340738642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash.WebApi", "CarWash.WebApi\CarWash.WebApi.csproj", "{B7730E06-A065-4DB4-830A-632172FD6396}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A01E2907-664C-4755-9438-47662599335C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01E2907-664C-4755-9438-47662599335C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01E2907-664C-4755-9438-47662599335C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01E2907-664C-4755-9438-47662599335C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8FCD7F-243B-4F5C-AB1C-8F2FDAE7EA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8FCD7F-243B-4F5C-AB1C-8F2FDAE7EA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8FCD7F-243B-4F5C-AB1C-8F2FDAE7EA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8FCD7F-243B-4F5C-AB1C-8F2FDAE7EA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A741AF-D07E-4E06-910B-926340738642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A741AF-D07E-4E06-910B-926340738642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A741AF-D07E-4E06-910B-926340738642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A741AF-D07E-4E06-910B-926340738642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7730E06-A065-4DB4-830A-632172FD6396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7730E06-A065-4DB4-830A-632172FD6396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7730E06-A065-4DB4-830A-632172FD6396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7730E06-A065-4DB4-830A-632172FD6396}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
