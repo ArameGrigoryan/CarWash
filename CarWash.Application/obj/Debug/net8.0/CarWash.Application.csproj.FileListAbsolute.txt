@@ -8,6 +8,7 @@
 /Users/picsartacademy/Desktop/CarWash/CarWash.Application/obj/Debug/net8.0/CarWash.Application.AssemblyInfoInputs.cache
 /Users/picsartacademy/Desktop/CarWash/CarWash.Application/obj/Debug/net8.0/CarWash.Application.AssemblyInfo.cs
 /Users/picsartacademy/Desktop/CarWash/CarWash.Application/obj/Debug/net8.0/CarWash.Application.csproj.CoreCompileInputs.cache
+/Users/picsartacademy/Desktop/CarWash/CarWash.Application/obj/Debug/net8.0/CarWash.Application.sourcelink.json
 /Users/picsartacademy/Desktop/CarWash/CarWash.Application/obj/Debug/net8.0/CarWash..CF4E541A.Up2Date
 /Users/picsartacademy/Desktop/CarWash/CarWash.Application/obj/Debug/net8.0/CarWash.Application.dll
 /Users/picsartacademy/Desktop/CarWash/CarWash.Application/obj/Debug/net8.0/refint/CarWash.Application.dll

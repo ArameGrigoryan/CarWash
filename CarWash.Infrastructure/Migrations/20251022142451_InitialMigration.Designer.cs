@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CarWash.Infrastructure.Migrations
 {
     [DbContext(typeof(CarWashContext))]
-    [Migration("20251018083125_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251022142451_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

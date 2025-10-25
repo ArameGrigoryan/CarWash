@@ -1,5 +1,6 @@
 using CarWash.Application.IServiceInterfaces;
 using CarWash.Core.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarWash.WebApi.Controllers;
@@ -55,7 +56,7 @@ public class BookingController : ControllerBase
         var booking = await _service.UpdateAsync(id, dto);
         return Ok(booking);
     }
-
+    [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]
     public async Task<ActionResult> Delete(int id)
     {
