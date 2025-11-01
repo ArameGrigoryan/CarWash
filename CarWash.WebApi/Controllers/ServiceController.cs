@@ -1,9 +1,11 @@
 using CarWash.Application.IServiceInterfaces;
 using CarWash.Core.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarWash.WebApi.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ServiceController : ControllerBase

@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarWash.WebApi.Controllers;
+
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class BookingController : ControllerBase
@@ -56,7 +58,6 @@ public class BookingController : ControllerBase
         var booking = await _service.UpdateAsync(id, dto);
         return Ok(booking);
     }
-    [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]
     public async Task<ActionResult> Delete(int id)
     {
@@ -64,4 +65,3 @@ public class BookingController : ControllerBase
         return flag ? NoContent() : NotFound();
     }
 }
-
