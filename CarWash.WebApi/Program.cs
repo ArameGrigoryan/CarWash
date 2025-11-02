@@ -2,12 +2,14 @@ using CarWash.Application.IRepositoryInterfaces;
 using CarWash.Application.IServiceInterfaces;
 using CarWash.Application.Mapping;
 using CarWash.Application.Services;
+using CarWash.Infrastructure.Caching;
 using CarWash.Infrastructure.Data;
 using CarWash.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using StackExchange.Redis;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,18 +35,29 @@ builder.Services.AddScoped<IServiceService, ServiceService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IWashStationService, WashStationService>();
 
-// 5️⃣ HttpContextAccessor
+// 5️⃣ Redis cache registration
+var configuration = builder.Configuration.GetSection("Redis:ConnectionString").Value;
+if (configuration != null)
+{
+    var redis = ConnectionMultiplexer.Connect(
+        configuration
+    );
+    builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
+}
+
+builder.Services.AddScoped<ICacheService, RedisCacheService>();
+
+// 6️⃣ HttpContextAccessor
 builder.Services.AddHttpContextAccessor();
 
-// 6️⃣ HttpClient + Typed client
+// 7️⃣ HttpClient + Typed client
 builder.Services.AddHttpClient("UserService", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5261/"); // UserService-ի HTTP port
+    client.BaseAddress = new Uri("http://localhost:5261/");
 });
+builder.Services.AddScoped<IUserServiceClient, UserServiceClient>();
 
-builder.Services.AddScoped<IUserServiceClient, UserServiceClient>(); // ✅ interface-ով
-
-// 7️⃣ JWT Authentication
+// 8️⃣ JWT Authentication
 var jwtSection = builder.Configuration.GetSection("Jwt");
 var secretKey = jwtSection["Key"] ?? throw new Exception("Jwt:Key missing in appsettings.json");
 
@@ -66,7 +79,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// 8️⃣ Swagger + JWT
+// 9️⃣ Swagger + JWT
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -77,7 +90,6 @@ builder.Services.AddSwaggerGen(c =>
         Description = "CarWash system API with JWT authentication"
     });
 
-    // ✅ JWT Bearer configuration for Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -104,13 +116,12 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-
-// 9️⃣ Controllers + JSON settings
+// 🔟 Controllers + JSON settings
 builder.Services.AddControllers()
     .AddNewtonsoftJson(opt =>
         opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
-// 🔟 CORS
+// 1️⃣1️⃣ CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>

@@ -10,18 +10,29 @@ public class UserService : Service<UserDto, User, CreateUserDto>, IUserService
 {
     private readonly IUserRepository _userRepository;
     private readonly IMapper _mapper;
-    public UserService(IUserRepository repository, IMapper mapper) : base(repository, mapper)
+    private readonly ICacheService _cache;
+
+    public UserService(IUserRepository repository, IMapper mapper, ICacheService cache)
+        : base(repository, mapper)
     {
-        _mapper = mapper;
         _userRepository = repository;
+        _mapper = mapper;
+        _cache = cache;
     }
 
-    public async Task<UserDto> GetAllInfoByEmailAsync(string emile)
+    public async Task<UserDto> GetAllInfoByEmailAsync(string email)
     {
-        var user = await _userRepository.GetUserByEmile(emile);
-        
+        string cacheKey = $"user_email_{email}";
+        var cachedUser = await _cache.GetAsync<UserDto>(cacheKey);
+        if (cachedUser != null) return cachedUser;
+
+        var user = await _userRepository.GetUserByEmile(email);
         if (user == null) throw new Exception("User not found");
-        
-        return _mapper.Map<User, UserDto>(user);
+
+        var userDto = _mapper.Map<User, UserDto>(user);
+
+        await _cache.SetAsync(cacheKey, userDto, TimeSpan.FromMinutes(10));
+
+        return userDto;
     }
 }
